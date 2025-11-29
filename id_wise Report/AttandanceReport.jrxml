@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="AttandanceReport" pageWidth="900" pageHeight="595" orientation="Landscape" columnWidth="860" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="50f038a2-49ef-4cfc-a5bc-8582214c7177">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     attandance.`employee_id` AS attandance_employee_id,
+     attandance.`employee_name` AS attandance_employee_name,
+     attandance.`email` AS attandance_email,
+     attandance.`main_salary` AS attandance_main_salary,
+     attandance.`present_days` AS attandance_present_days,
+     attandance.`absent_days` AS attandance_absent_days,
+     attandance.`net_salary` AS attandance_net_salary
+FROM
+     `attandance` attandance
+where employee_id = $P{id};]]>
+	</queryString>
+	<field name="attandance_employee_id" class="java.lang.Integer"/>
+	<field name="attandance_employee_name" class="java.lang.String"/>
+	<field name="attandance_email" class="java.lang.String"/>
+	<field name="attandance_main_salary" class="java.lang.String"/>
+	<field name="attandance_present_days" class="java.lang.String"/>
+	<field name="attandance_absent_days" class="java.lang.String"/>
+	<field name="attandance_net_salary" class="java.lang.String"/>
+	<group name="attandance_employee_id">
+		<groupExpression><![CDATA[$F{attandance_employee_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="286" y="27" width="243" height="39" forecolor="#990033" backcolor="#990033" uuid="8037fc94-f2de-442e-aabd-4a029939076f"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Attendance Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="0" width="94" height="20" uuid="9e5673f2-8cce-4ecf-ac17-27e87243aa83"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[employee_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="0" width="125" height="20" uuid="d45a5e8e-95bc-46d1-b16f-bdc8d86c9585"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[employee_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="0" width="130" height="20" uuid="22998525-4708-4986-984a-9a58aedd6962"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[employee_email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="436" y="0" width="93" height="20" uuid="6f17e2f9-bb53-4332-a87a-47a8e21acc29"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[main_salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="547" y="0" width="104" height="20" uuid="4756879f-8f7c-4c65-92da-6989f71de7a4"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[present_days]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="667" y="0" width="95" height="20" uuid="69d3f9c0-a86e-4187-bba1-0a5dc02d5ef8"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[absent_days]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="774" y="0" width="86" height="20" uuid="507fc21b-e677-4bbd-aa49-48202f5946fa"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[net_salary]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="53" splitType="Stretch">
+			<textField>
+				<reportElement x="41" y="0" width="48" height="20" uuid="54346836-e6ef-4e0d-ae6c-ab419d36c150"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{attandance_employee_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="0" width="150" height="20" uuid="1f7b486c-cd1f-41b8-902e-58a7e9f2764f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{attandance_employee_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="0" width="130" height="20" uuid="609d2bf7-398d-4e68-b745-b8959871feda"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{attandance_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="453" y="0" width="44" height="20" uuid="23dc23e5-3bf5-476c-9e55-8d588f781180"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{attandance_main_salary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="577" y="0" width="34" height="20" uuid="7f747b05-427a-4429-9063-d1d5fb601331"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{attandance_present_days}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="690" y="0" width="49" height="20" uuid="ce435cf7-d48b-4fcb-9788-ac07b9a47948"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{attandance_absent_days}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="805" y="0" width="36" height="20" uuid="a3ca230a-bbb8-48cf-aa9c-0ff615ff3423"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{attandance_net_salary}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

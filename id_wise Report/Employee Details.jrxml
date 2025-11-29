@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Employee Details" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="67f0ef35-6556-4121-b1b2-133aa38d74bc">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     empregestration1.`employee_id` AS empregestration1_employee_id,
+     empregestration1.`employee_name` AS empregestration1_employee_name,
+     empregestration1.`address` AS empregestration1_address,
+     empregestration1.`email` AS empregestration1_email,
+     empregestration1.`password` AS empregestration1_password,
+     empregestration1.`contact_number` AS empregestration1_contact_number,
+     empregestration1.`bank_name` AS empregestration1_bank_name,
+     empregestration1.`branch` AS empregestration1_branch,
+     empregestration1.`account_no` AS empregestration1_account_no,
+     empregestration1.`ifsc_code` AS empregestration1_ifsc_code,
+     empregestration1.`salary` AS empregestration1_salary
+FROM
+     `empregestration1` empregestration1
+where employee_id = $P{id};]]>
+	</queryString>
+	<field name="empregestration1_employee_id" class="java.lang.Integer"/>
+	<field name="empregestration1_employee_name" class="java.lang.String"/>
+	<field name="empregestration1_address" class="java.lang.String"/>
+	<field name="empregestration1_email" class="java.lang.String"/>
+	<field name="empregestration1_password" class="java.lang.String"/>
+	<field name="empregestration1_contact_number" class="java.lang.String"/>
+	<field name="empregestration1_bank_name" class="java.lang.String"/>
+	<field name="empregestration1_branch" class="java.lang.String"/>
+	<field name="empregestration1_account_no" class="java.lang.String"/>
+	<field name="empregestration1_ifsc_code" class="java.lang.String"/>
+	<field name="empregestration1_salary" class="java.lang.String"/>
+	<group name="empregestration1_employee_id">
+		<groupExpression><![CDATA[$F{empregestration1_employee_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="266" y="24" width="243" height="39" forecolor="#990033" backcolor="#990033" uuid="4950425f-60a8-4eab-a3bf-9c112cca7e2e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employee Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="321" splitType="Stretch">
+			<staticText>
+				<reportElement x="63" y="0" width="100" height="20" uuid="474cf383-72c0-460c-8373-46c30e4d5486"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[employee_id]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="224" y="0" width="100" height="20" uuid="068a75f6-c9e7-404f-a6fa-3016a0514d12"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{empregestration1_employee_id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="63" y="49" width="120" height="20" uuid="d6d5d640-d7da-4d9e-8514-45df24ae31f7"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[employee_name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="224" y="49" width="100" height="20" uuid="45db5684-c6eb-4246-8d46-c933e5cf45c7"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{empregestration1_employee_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="465" y="0" width="68" height="20" uuid="cc8268e5-2cd2-414c-9a3f-235de2f5e2d4"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[address]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="620" y="0" width="118" height="20" uuid="d87fe593-9c21-4517-a7e9-e85002f0ffee"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{empregestration1_address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="465" y="49" width="68" height="20" uuid="c7226dc8-d774-4d64-a6b8-60f4099be558"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[email]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="620" y="49" width="118" height="20" uuid="f4e43e41-c1af-4f45-9795-2a900bdfb2e9"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{empregestration1_email}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="63" y="102" width="100" height="20" uuid="65ed00d6-555a-4e70-acdc-1ca06234d4b5"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[password]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="224" y="102" width="100" height="20" uuid="9902e811-dfac-470a-8fae-772bfd1912a0"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{empregestration1_password}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="465" y="102" width="131" height="20" uuid="547422f0-4570-4d8c-8414-34b20cad9f05"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[contact_number]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="620" y="102" width="118" height="20" uuid="a4e12537-7991-41f2-8d91-98467b484eb2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{empregestration1_contact_number}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="63" y="156" width="100" height="20" uuid="3d3127c6-9852-4d69-9a19-6b0f617cc43c"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[bank_name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="224" y="156" width="100" height="20" uuid="3054ee7e-bda2-44d4-9c6a-0cd99f0d6e18"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{empregestration1_bank_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="465" y="156" width="100" height="20" uuid="f3ed103b-c686-420f-b7ce-d3f2ad489573"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[branch]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="620" y="156" width="118" height="20" uuid="f0c375c0-14d7-4e5f-a694-ea11c87ddddd"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{empregestration1_branch}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="63" y="214" width="100" height="20" uuid="ec7feb04-414f-4ec4-acf3-1fa2bb179ea7"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[account_no]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="224" y="214" width="100" height="20" uuid="b9abe27b-e3dc-4bd8-88e8-6bf50c3d3c46"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{empregestration1_account_no}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="465" y="214" width="100" height="20" uuid="8ea74f44-f825-4475-be7f-452e975c369d"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ifsc_code]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="620" y="214" width="118" height="20" uuid="ab75124d-ac5e-40c1-82b7-af3f2fd652b4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{empregestration1_ifsc_code}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="63" y="266" width="100" height="20" uuid="c7aca51e-fb4e-4390-bdaf-5cd0e53d53dd"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[salary]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="224" y="266" width="100" height="20" uuid="17cc19d9-5fbe-49cb-a747-a666503e53c3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{empregestration1_salary}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="69" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

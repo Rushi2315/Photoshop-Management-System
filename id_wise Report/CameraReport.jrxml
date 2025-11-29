@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CameraReport" pageWidth="650" pageHeight="595" orientation="Landscape" columnWidth="610" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="217f1541-92f8-41a9-a100-94927be9d144">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     camera.`camera_id` AS camera_camera_id,
+     camera.`company_name` AS camera_company_name,
+     camera.`camera_type` AS camera_camera_type,
+     camera.`lens` AS camera_lens,
+     camera.`image_sensor` AS camera_image_sensor,
+     camera.`price` AS camera_price
+FROM
+     `camera` camera
+where camera_id = $P{id};]]>
+	</queryString>
+	<field name="camera_camera_id" class="java.lang.Integer"/>
+	<field name="camera_company_name" class="java.lang.String"/>
+	<field name="camera_camera_type" class="java.lang.String"/>
+	<field name="camera_lens" class="java.lang.String"/>
+	<field name="camera_image_sensor" class="java.lang.String"/>
+	<field name="camera_price" class="java.lang.String"/>
+	<group name="camera_camera_id">
+		<groupExpression><![CDATA[$F{camera_camera_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="68" splitType="Stretch">
+			<staticText>
+				<reportElement x="181" y="14" width="243" height="39" forecolor="#990033" backcolor="#990033" uuid="58ec6589-c34d-4ddc-a579-3d44d3439003"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Camera Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="26" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="0" width="83" height="20" uuid="b2a1353c-37c3-4f80-8141-0bd581d23306"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[camera_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="0" width="102" height="20" uuid="c4e31c5c-3a75-41f3-8f7b-fbe951f6420e"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[camera_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="242" y="0" width="95" height="20" uuid="eae2686c-8314-4e11-81a8-dbadb1745a14"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[camera_type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="0" width="42" height="20" uuid="cdc95548-c3cd-4192-9c1e-b2660d27c545"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[lens]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="426" y="0" width="109" height="20" uuid="570fcd7f-a6f5-4424-a628-a4a1dd16ff4e"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[image_sensor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="556" y="0" width="49" height="20" uuid="971f5dd5-eff1-47b0-9739-c06b8330b330"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[price]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="48" splitType="Stretch">
+			<textField>
+				<reportElement x="29" y="0" width="48" height="20" uuid="3ead3a8b-5fd9-4dbf-9364-e38176846203"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{camera_camera_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="0" width="46" height="20" uuid="53e1e8a3-fc08-4bb4-b8e7-decdaab6c653"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{camera_company_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="269" y="0" width="43" height="20" uuid="cbe649d0-ccbe-442a-91dc-bb84dfac2988"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{camera_camera_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="362" y="0" width="42" height="20" uuid="f022d2f1-3c2f-4ffa-b32e-1da9eebeaae8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{camera_lens}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="448" y="0" width="47" height="20" uuid="289d8212-c2b4-4a7f-8ff9-55aff5f5462d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{camera_image_sensor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="562" y="0" width="43" height="20" uuid="ec829153-4b1a-4f07-8337-36244cc0fb91"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{camera_price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

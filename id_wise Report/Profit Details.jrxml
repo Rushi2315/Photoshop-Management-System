@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Profit Details" pageWidth="840" pageHeight="595" orientation="Landscape" columnWidth="800" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ba822a45-8a66-4bd5-be2f-574f16f6142a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     profit.`bill_id` AS profit_bill_id,
+     profit.`customer_name` AS profit_customer_name,
+     profit.`address` AS profit_address,
+     profit.`contact_number` AS profit_contact_number,
+     profit.`event_name` AS profit_event_name,
+     profit.`event_place` AS profit_event_place,
+     profit.`event_time` AS profit_event_time,
+     profit.`event_price` AS profit_event_price,
+     profit.`total_days` AS profit_total_days,
+     profit.`total_hours` AS profit_total_hours,
+     profit.`start_date` AS profit_start_date,
+     profit.`end_date` AS profit_end_date,
+     profit.`paid_amount` AS profit_paid_amount,
+     profit.`remaining_amount` AS profit_remaining_amount,
+     profit.`expense` AS profit_expense,
+     profit.`profit` AS profit_profit
+FROM
+     `profit` profit
+where bill_id = $P{id};]]>
+	</queryString>
+	<field name="profit_bill_id" class="java.lang.Integer"/>
+	<field name="profit_customer_name" class="java.lang.String"/>
+	<field name="profit_address" class="java.lang.String"/>
+	<field name="profit_contact_number" class="java.lang.String"/>
+	<field name="profit_event_name" class="java.lang.String"/>
+	<field name="profit_event_place" class="java.lang.String"/>
+	<field name="profit_event_time" class="java.lang.String"/>
+	<field name="profit_event_price" class="java.lang.String"/>
+	<field name="profit_total_days" class="java.lang.String"/>
+	<field name="profit_total_hours" class="java.lang.String"/>
+	<field name="profit_start_date" class="java.lang.String"/>
+	<field name="profit_end_date" class="java.lang.String"/>
+	<field name="profit_paid_amount" class="java.lang.String"/>
+	<field name="profit_remaining_amount" class="java.lang.String"/>
+	<field name="profit_expense" class="java.lang.String"/>
+	<field name="profit_profit" class="java.lang.String"/>
+	<group name="profit_bill_id">
+		<groupExpression><![CDATA[$F{profit_bill_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="281" y="23" width="243" height="39" forecolor="#990033" backcolor="#990033" uuid="07f5e48a-6936-4b71-b8c0-c4e24dec6b1f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Profit Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="342" splitType="Stretch">
+			<staticText>
+				<reportElement x="46" y="0" width="54" height="20" uuid="5fa04360-7815-4ed5-ba3e-98ec41af914b"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[bill_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="0" width="122" height="20" uuid="688570d1-d222-4105-b5a4-010bd193dbca"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[customer_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="43" width="78" height="20" uuid="a9cd73c7-ccfb-43d6-b7ad-c22e50002362"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="43" width="122" height="20" uuid="54d7354d-167a-4184-9f4c-8d44bc481b2f"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[contact_number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="80" width="99" height="20" uuid="e897c913-0b5a-497d-b1c7-ca6919bdee74"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[event_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="80" width="95" height="20" uuid="1534cd4a-8f54-4516-8ef2-e8c4c7b32cec"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[event_place]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="126" width="99" height="20" uuid="cf597cfb-4fe2-42e9-a361-7fc94bc9c97b"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[event_time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="126" width="122" height="20" uuid="067c1e67-3bcf-4de4-9394-46ba7e040bb5"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[event_price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="176" width="99" height="20" uuid="159e39d0-556f-4787-95a9-0a0b9386f069"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[total_days]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="176" width="122" height="20" uuid="d6ec1fe4-4ace-4f5d-934a-fe53daecc84e"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[total_hours]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="218" width="99" height="20" uuid="48fd91c5-9fcc-45fe-bf5a-dc31833c4fb9"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[start_date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="218" width="122" height="20" uuid="0eddface-8148-4950-b959-618856c092ea"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[end_date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="257" width="99" height="20" uuid="d2a71e7e-a605-45c0-9f7d-c3841405e6b3"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[paid_amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="257" width="143" height="20" uuid="f4ca5fa6-f995-4e84-b14d-2f42334fdda0"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[remaining_amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="297" width="99" height="20" uuid="016637cb-9446-4394-95fd-67b4dfc26f25"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[expense]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="297" width="122" height="20" uuid="ed1005d3-7539-4838-84b2-47d2750a5a42"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[profit]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="221" y="0" width="50" height="20" uuid="39ba2e2b-bb20-4a9c-960f-c5d3ca2b6f8d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{profit_bill_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="623" y="0" width="122" height="20" uuid="0cd53d52-97fb-48c4-9023-b351288a05f0"/>
+				<textFieldExpression><![CDATA[$F{profit_customer_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="43" width="122" height="20" uuid="66aa5b5e-a25d-49b6-8a68-ccd0910ffd32"/>
+				<textFieldExpression><![CDATA[$F{profit_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="623" y="43" width="122" height="20" uuid="5710dcfa-40a2-4fdf-b78f-6531cb87080d"/>
+				<textFieldExpression><![CDATA[$F{profit_contact_number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="80" width="122" height="20" uuid="6602f3cc-b254-4d98-90e8-092e25652f33"/>
+				<textFieldExpression><![CDATA[$F{profit_event_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="623" y="80" width="122" height="20" uuid="3c822060-5262-4fb4-9044-fe6eb9e63c82"/>
+				<textFieldExpression><![CDATA[$F{profit_event_place}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="126" width="122" height="20" uuid="2bb05921-5414-48c4-be1a-cfa0b445558e"/>
+				<textFieldExpression><![CDATA[$F{profit_event_time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="623" y="126" width="122" height="20" uuid="63c9a2fe-0cd8-4f6f-b7d3-730d83ef1a50"/>
+				<textFieldExpression><![CDATA[$F{profit_event_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="176" width="122" height="20" uuid="f9e1dd1f-e096-48a9-ad77-09840ef07feb"/>
+				<textFieldExpression><![CDATA[$F{profit_total_days}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="623" y="176" width="122" height="20" uuid="2772e326-0909-4fe4-be8f-28f8361eb0cb"/>
+				<textFieldExpression><![CDATA[$F{profit_total_hours}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="218" width="122" height="20" uuid="e3d9ef59-a724-4ede-b48b-f7c46d8457b4"/>
+				<textFieldExpression><![CDATA[$F{profit_start_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="623" y="218" width="122" height="20" uuid="f354e0fb-1f80-452f-a7bb-954b7898417e"/>
+				<textFieldExpression><![CDATA[$F{profit_end_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="257" width="122" height="20" uuid="42622a17-2796-40af-b019-cc0c2e0529ca"/>
+				<textFieldExpression><![CDATA[$F{profit_paid_amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="623" y="257" width="122" height="20" uuid="6d35c11e-6f99-4157-86fa-015bbc58bd74"/>
+				<textFieldExpression><![CDATA[$F{profit_remaining_amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="297" width="122" height="20" uuid="4493c56d-c9aa-4e67-859b-7d59b0c9aeb2"/>
+				<textFieldExpression><![CDATA[$F{profit_expense}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="623" y="297" width="122" height="20" uuid="9965b98b-18f2-41c6-afe6-4d9350402518"/>
+				<textFieldExpression><![CDATA[$F{profit_profit}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="61" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
