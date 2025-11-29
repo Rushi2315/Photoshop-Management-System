@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BillReport" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e08d11ee-166e-4681-bdbe-acc532d4ccaa">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     bill.`id` AS bill_id,
+     bill.`booking_id` AS bill_booking_id,
+     bill.`event_category` AS bill_event_category,
+     bill.`service_name` AS bill_service_name,
+     bill.`quantity` AS bill_quantity,
+     bill.`price` AS bill_price,
+     bill.`total` AS bill_total
+FROM
+     `bill` bill]]>
+	</queryString>
+	<field name="bill_id" class="java.lang.Integer"/>
+	<field name="bill_booking_id" class="java.lang.String"/>
+	<field name="bill_event_category" class="java.lang.String"/>
+	<field name="bill_service_name" class="java.lang.String"/>
+	<field name="bill_quantity" class="java.lang.String"/>
+	<field name="bill_price" class="java.lang.String"/>
+	<field name="bill_total" class="java.lang.String"/>
+	<group name="bill_id">
+		<groupExpression><![CDATA[$F{bill_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="246" y="17" width="243" height="39" forecolor="#990033" backcolor="#990033" uuid="723f0a7b-732f-4f95-85d0-21ba4cfdef32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bill Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="56" y="0" width="52" height="20" uuid="522e47ed-efdd-40a3-ac84-cb44f1251436"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[bill_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="0" width="90" height="20" uuid="d2222ee8-2bfd-4f6c-af0d-8af010e9959b"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[booking_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="246" y="0" width="114" height="20" uuid="b6ef5e2f-d947-46a6-91d1-dd2f8ae0cc03"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[event_category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="0" width="103" height="20" uuid="70b0d71e-88d2-4c5f-9414-bcc3c354e599"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[service_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="523" y="0" width="67" height="20" uuid="7c3a2f3d-4a3e-4470-9da0-8df16676517c"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="623" y="0" width="51" height="20" uuid="c1a7f8cf-6ab5-45a3-86a6-d0899cb8bdf9"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="707" y="0" width="42" height="20" uuid="32a2f84f-40d2-49c0-ac3e-13c8cf861552"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="43" splitType="Stretch">
+			<textField>
+				<reportElement x="74" y="0" width="22" height="20" uuid="6c51bfec-f84d-4c2e-985a-684420f1fbc7"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{bill_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="158" y="0" width="47" height="20" uuid="44bc6f97-7aa8-4b58-984d-21f5c08e8743"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{bill_booking_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="0" width="114" height="20" uuid="7d9e6ff4-8d79-42fa-a337-c942ff384116"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{bill_event_category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="386" y="0" width="103" height="20" uuid="055636cb-3834-4e54-a697-f3240111b8ad"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{bill_service_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="549" y="0" width="27" height="20" uuid="465ebb51-9d18-4e6f-ba70-7e3748bfde44"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{bill_quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="636" y="0" width="27" height="20" uuid="0e806ae7-68f9-44a2-a2fd-fc7f2f5dd012"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{bill_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="707" y="0" width="42" height="20" uuid="22c1c4ad-1391-4a6a-8670-b23f886a6809"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{bill_total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

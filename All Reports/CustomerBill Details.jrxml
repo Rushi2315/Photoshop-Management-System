@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CustomerBill Details" pageWidth="750" pageHeight="595" orientation="Landscape" columnWidth="710" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="48c26425-386e-4b17-bda5-299d4a50fc1a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     customer_bill.`bill_id` AS customer_bill_bill_id,
+     customer_bill.`customer_name` AS customer_bill_customer_name,
+     customer_bill.`address` AS customer_bill_address,
+     customer_bill.`contact_number` AS customer_bill_contact_number,
+     customer_bill.`event_name` AS customer_bill_event_name,
+     customer_bill.`event_place` AS customer_bill_event_place,
+     customer_bill.`event_time` AS customer_bill_event_time,
+     customer_bill.`event_price` AS customer_bill_event_price,
+     customer_bill.`total_days` AS customer_bill_total_days,
+     customer_bill.`total_hours` AS customer_bill_total_hours,
+     customer_bill.`start_date` AS customer_bill_start_date,
+     customer_bill.`end_date` AS customer_bill_end_date,
+     customer_bill.`paid_amount` AS customer_bill_paid_amount,
+     customer_bill.`remaining_amount` AS customer_bill_remaining_amount
+FROM
+     `customer_bill` customer_bill]]>
+	</queryString>
+	<field name="customer_bill_bill_id" class="java.lang.Integer"/>
+	<field name="customer_bill_customer_name" class="java.lang.String"/>
+	<field name="customer_bill_address" class="java.lang.String"/>
+	<field name="customer_bill_contact_number" class="java.lang.String"/>
+	<field name="customer_bill_event_name" class="java.lang.String"/>
+	<field name="customer_bill_event_place" class="java.lang.String"/>
+	<field name="customer_bill_event_time" class="java.lang.String"/>
+	<field name="customer_bill_event_price" class="java.lang.String"/>
+	<field name="customer_bill_total_days" class="java.lang.String"/>
+	<field name="customer_bill_total_hours" class="java.lang.String"/>
+	<field name="customer_bill_start_date" class="java.lang.String"/>
+	<field name="customer_bill_end_date" class="java.lang.String"/>
+	<field name="customer_bill_paid_amount" class="java.lang.String"/>
+	<field name="customer_bill_remaining_amount" class="java.lang.String"/>
+	<group name="customer_bill_bill_id">
+		<groupExpression><![CDATA[$F{customer_bill_bill_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="154" y="0" width="340" height="39" forecolor="#990033" backcolor="#990033" uuid="09a6fe38-dbb3-4fef-a3e4-5c6e33d95f39"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Algerian" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sanket Patil Photos & Films]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="514" y="25" width="196" height="54" forecolor="#330033" backcolor="#990033" uuid="f530f958-e025-41ca-87d6-cbd67e91e271"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mob No. 9209187973 Address : Wategaon Tal- Walwa Dist- Sangli]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="49" width="130" height="30" forecolor="#330033" backcolor="#990033" uuid="1306023e-3141-46eb-a5a4-9835ecdc33e2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date : / / 2024]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="28" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="349" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="27" height="20" uuid="de04c74a-3ccd-438f-84b7-ca861e7388cc"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="0" width="126" height="20" uuid="e0cc0326-8777-4952-bd77-6cc7a2dc60e1"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[customer_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="47" width="68" height="20" uuid="3793d233-d532-447a-9c4a-d7b364454414"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="47" width="120" height="20" uuid="be067b85-7092-43f3-ad55-7f2a54c5f21c"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[contact_number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="98" width="93" height="20" uuid="923ccc92-909a-4cf7-8476-ff51df04af4e"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[event_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="98" width="120" height="20" uuid="6b95020d-3480-487f-855a-a6383be5c715"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[event_place]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="144" width="93" height="20" uuid="8ce87160-8f2d-41a3-80fa-960a1828c5d0"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[event_time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="144" width="120" height="20" uuid="660aa10f-7380-4e41-9463-e60f112fe095"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[event_price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="181" width="81" height="20" uuid="a5edd4ff-5678-4dbc-a3d9-aad4f8ba23aa"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[total_days]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="181" width="91" height="20" uuid="63be3b4d-1a55-4d6d-ad02-d729752e30c1"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[total_hours]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="217" width="83" height="20" uuid="795733e4-5a19-4461-a8a5-01dafb0f3af1"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[start_date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="217" width="80" height="20" uuid="1e95785d-8df0-410f-8ebd-960b949b6299"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[end_date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="261" width="93" height="20" uuid="67f71bc0-af5f-495b-9af3-66ccca8710c7"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[paid_amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="261" width="140" height="20" uuid="d6760451-cf8f-497d-8011-cd1d9815b3a6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[remaining_amount]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="0" width="27" height="20" uuid="99112864-edd8-4a17-a548-0e8f85db46b6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{customer_bill_bill_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="549" y="0" width="116" height="20" uuid="008d836c-883f-4594-af85-99ba98678fa8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{customer_bill_customer_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="47" width="188" height="20" uuid="2e0d3713-38de-4589-bed9-f95214dc432f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{customer_bill_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="549" y="47" width="116" height="20" uuid="a941cb43-cd7b-4c69-a59d-6154d1713483"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{customer_bill_contact_number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="98" width="140" height="20" uuid="df9edc09-400c-40a9-9b34-740746744509"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{customer_bill_event_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="549" y="98" width="116" height="20" uuid="c6e3b629-d552-4807-9963-2c41ec4cde1f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{customer_bill_event_place}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="144" width="140" height="20" uuid="f43a68f8-e05f-49f7-b8d1-2f4ce3724880"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{customer_bill_event_time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="549" y="144" width="116" height="20" uuid="9193c68f-135b-4059-9447-55273882e8ac"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{customer_bill_event_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="181" width="140" height="20" uuid="3f5afb06-2795-4a3c-b55b-fb26ca55dc5c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{customer_bill_total_days}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="549" y="181" width="116" height="20" uuid="c011c3a4-60b8-420a-9291-219e69d0f076"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{customer_bill_total_hours}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="217" width="140" height="20" uuid="d2a57def-7c5c-4a5f-9500-60a8888f62f3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{customer_bill_start_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="549" y="217" width="116" height="20" uuid="c095deee-0bb4-4ed6-a3b8-7de2feae79f6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{customer_bill_end_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="261" width="140" height="20" uuid="455da325-b278-4a66-947d-cd62ecfff3a5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{customer_bill_paid_amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="549" y="261" width="116" height="20" uuid="4a02dc20-bb7f-49d8-83ba-4a917d1cbf04"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{customer_bill_remaining_amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="514" y="319" width="130" height="30" forecolor="#330033" backcolor="#990033" uuid="9f176d9f-4e36-4e59-86a4-e3a5cffe6a6b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Owner Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="319" width="85" height="30" forecolor="#330033" backcolor="#990033" uuid="dcb27d7e-79b0-4bb5-a477-38c964c47303"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Signature]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
